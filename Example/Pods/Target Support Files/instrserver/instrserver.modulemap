@@ -1,0 +1,6 @@
+framework module instrserver {
+  umbrella header "instrserver-umbrella.h"
+
+  export *
+  module * { export * }
+}

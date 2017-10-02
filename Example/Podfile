@@ -1,0 +1,4 @@
+use_frameworks!
+target 'instrserver_Tests' do
+  pod 'instrserver', :path => '../'
+end
