@@ -20,13 +20,14 @@
   },
   "source_files": "instrserver/Classes/**/*",
   "public_header_files": "Pod/Classes/**/*.h",
-  "frameworks": [
-    "UIKit",
-    "Foundation"
-  ],
+  "frameworks": "Foundation",
+  "libraries": "objc",
   "dependencies": {
     "GCDWebServer": [
       "~> 3.4"
     ]
+  },
+  "pod_target_xcconfig": {
+    "ENABLE_STRICT_OBJC_MSGSEND": "NO"
   }
 }

@@ -12,6 +12,8 @@ HTTP server component for instr
   s.ios.deployment_target = '11.0'
   s.source_files = 'instrserver/Classes/**/*'
   s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'Foundation'
+  s.frameworks = 'Foundation'
+  s.libraries = 'objc'
   s.dependency 'GCDWebServer', '~> 3.4'
+  s.pod_target_xcconfig = { 'ENABLE_STRICT_OBJC_MSGSEND' => 'NO' }
 end

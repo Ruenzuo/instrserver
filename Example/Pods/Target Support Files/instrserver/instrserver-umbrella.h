@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "INSServer.h"
 
 FOUNDATION_EXPORT double instrserverVersionNumber;
 FOUNDATION_EXPORT const unsigned char instrserverVersionString[];
