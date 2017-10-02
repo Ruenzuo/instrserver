@@ -81,8 +81,10 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
 
-    id condition = objc_msgSend(NSClassFromString(@"GREYCondition"), @selector(conditionWithName:block:), @"Waiting for instr", conditionBlock);
-    objc_msgSend(condition, @selector(waitWithTimeout:), self.timeout);
+    id (*f)(id, SEL, NSString *, BOOL (^)(void)) = (id (*)(id, SEL, NSString *, BOOL (^)(void)))objc_msgSend;
+    id condition = f(NSClassFromString(@"GREYCondition"), @selector(conditionWithName:block:), @"Waiting for instr", conditionBlock);
+    id (*g)(id, SEL, CFTimeInterval) = (id (*)(id, SEL, CFTimeInterval))objc_msgSend;
+    g(condition, @selector(waitWithTimeout:), self.timeout);
 
 #pragma clang diagnostic pop
 
