@@ -11,7 +11,7 @@ HTTP server component for instr
   s.source           = { :git => 'https://github.com/ruenzuo/instrserver.git', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
   s.source_files = 'instrserver/Classes/**/*'
-  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'instrserver/Classes/**/*.h'
   s.frameworks = 'Foundation'
   s.libraries = 'objc'
   s.dependency 'GCDWebServer', '~> 3.4'
